@@ -13,6 +13,8 @@ export class DivinationComponent implements OnInit {
 
   coupsRestants = 5;
 
+  mode: string;
+
   constructor() {
   }
 
