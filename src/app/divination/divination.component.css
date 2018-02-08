@@ -1,0 +1,39 @@
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 500px;
+  height: 400px;
+  margin: auto;
+  background-color: white;
+}
+
+.container {
+  display: flex;
+  padding: 50px;
+  justify-content: center;
+}
+
+h3 {
+  text-align: center;
+}
+
+.shoot-label {
+  padding: 10px;
+}
+.shoot-input {
+  padding: 10px;
+  text-align: center;
+}
+.bravo-container {
+  width: 100%;
+  background-color: lightgrey;
+  text-align: center;
+}
+.bravo-label {
+  background-color: lightgreen;
+}
+.loser-label {
+  background-color: brown;
+}

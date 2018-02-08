@@ -1,0 +1,38 @@
+<h3>Divination est un jeu où il faut deviner un nombre généré aléatoirement entre 0 et 10 en 5 coups</h3>
+<div class="main-container">
+  <div>
+    <span>Difficulté</span>
+    <form name="level">
+      <div>
+        <input type="radio" id="contactChoice1"
+               name="contact" value="5" [(ngModel)]="nombreDeCoups">
+        <label for="contactChoice1">Facile</label>
+
+        <input type="radio" id="contactChoice2"
+               name="contact" value="10" [(ngModel)]="nombreDeCoups">
+        <label for="contactChoice2">Moyen</label>
+
+        <input type="radio" id="contactChoice3"
+               name="contact" value="10" [(ngModel)]="nombreDeCoups">
+        <label for="contactChoice3">Difficile</label>
+      </div>
+      <div>{{ nombreDeCoups }}</div>
+    </form>
+  </div>
+  <form class="container"(ngSubmit)="register()">
+    <span class="shoot-label">Shoot</span>
+    <input class="shoot-input" type="number" name="shoot" placeholder="1-10" min="0" max="10">
+    <button type="submit" [disabled]="coupsRestants === 0">C'est votre dernière bafouille ?</button>
+  </form>
+  <div class="bravo-container coups-restants-label">
+    <span>Coups restants: </span>  <span>{{ coupsRestants }}</span>
+  </div>
+
+  <div class="bravo-container bravo-label" *ngIf="afficherBravo">
+    <span><h3>Bravo! Gagné</h3></span>
+  </div>
+
+  <div class="bravo-container loser-label" *ngIf="coupsRestants === 0">
+    <span><h3>Perdu! T'es moche</h3></span>
+  </div>
+</div>
